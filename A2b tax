@@ -1,0 +1,69 @@
+public class Dyna {
+
+public static void main(String args[]){
+
+    A2b a2b= new A2bUS();
+    a2b.taxAmount(1000.0);
+
+
+    a2b= new A2bUK();
+    a2b.taxAmount(1000.0);
+
+
+    a2b= new A2bIN();
+    a2b.taxAmount(1000.0);
+
+
+}}
+
+class A2b {
+
+     void greet() {
+    System.out.println("Have a nice day..!");
+    }
+
+double taxAmount (double amount) {
+
+    double taxPercentage= 10.0;
+    double taxAmount= amount*(taxPercentage/100.0);
+    System.out.println("Your tax amount is "+ taxAmount);
+greet();
+    return taxAmount;
+    }
+}
+
+class A2bUS extends A2b {
+
+    double taxAmount (double amount) {
+
+    double taxPercentage= 20.0;
+    double taxAmount= amount*(taxPercentage/100.0);
+    System.out.println("Your tax amount is "+ taxAmount);
+greet();
+    return taxAmount;
+    }
+}
+
+class A2bUK extends A2b {
+
+double taxAmount (double amount) {
+
+    double taxPercentage= 30.0;
+    double taxAmount= amount*(taxPercentage/100.0);
+    System.out.println("Your tax amount is "+ taxAmount);
+greet();
+    return taxAmount;
+    }
+}
+
+class A2bIN extends A2b {
+
+double taxAmount (double amount) {
+
+    double taxPercentage= 5.0;
+    double taxAmount= amount*(taxPercentage/100.0);
+    System.out.println("Your tax amount is "+ taxAmount);
+greet();
+    return taxAmount;
+    }
+}
