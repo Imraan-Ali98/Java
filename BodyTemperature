@@ -1,0 +1,29 @@
+public class Temperature {
+
+    Temperature(String name, double value) {
+
+        if(value==95){
+            System.out.println("You got cold..! "+ name);
+        } 
+        else if(value>=95 && value<=98) {
+                System.out.println("You are in normal condition..!!! "+ name);
+        } 
+        else if(value>=99 && value<=102) {
+                System.out.println("You got fever..! "+ name);
+        } 
+        else if(value>=103 && value<=106) {
+                System.out.println("You got high fever..! "+ name);
+        }
+        else {
+                System.out.println("Error!!! Please scan again Sir/Madam.");
+        }
+
+}
+
+public static void main(String args[]) {
+
+    Temperature obj = new Temperature("Imraan", 98.1);
+
+}
+
+}
