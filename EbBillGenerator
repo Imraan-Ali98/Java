@@ -1,0 +1,263 @@
+public class EbTariff {
+    
+    EbTariff(String category, double units) {
+        
+        if(category=="Domestic" || category=="domestic" || category=="Handloom" || category=="handloom" || category=="Handlooms" || category=="handlooms" ||
+            category=="Old age homes" || category=="old age homes" || category=="Consulting rooms" || category=="consulting rooms") {
+          
+              if(category=="Handloom" || category=="handloom" || category=="Handlooms" || category=="handlooms") 
+{
+                
+                if(units<=500.00) {
+                
+                units= units - 200.00;
+
+                if(units<=200) {
+
+                    double fixedCharge= 0.0, energyCharge= 0.0, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    double cost=   units * energyCharge;
+                    System.out.println("Amount to be paid is "+ cost);
+                                                         
+                    }
+                else if(units>=201.00 && units<=300.00) {
+                        
+                        double fixedCharge= 0.0, energyCharge= 2.25, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+    
+                        double cost= 100.00 * energyCharge;
+                        fixedCharge= 0.0; energyCharge= 4.50; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+    
+                        cost= ((units-200) * energyCharge) + cost;
+                        System.out.println("Amount to be paid is "+ cost);
+                    }
+}
+                
+                else if(units>=501.00 && units<=1000) {
+
+                    units= units - 200.00;
+
+                    if(units>=301.00 && units<=400.00) {
+                        double fixedCharge= 0.0, energyCharge= 4.50, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+    
+                        double cost= 300.00 * energyCharge;
+                        fixedCharge= 0.0; energyCharge= 4.50; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+    
+                        cost= ((units-300) * energyCharge) + cost;
+                        System.out.println("Amount to be paid is "+ cost);
+                                                         
+                    }
+                    else if(units>=401.00 && units<=500.00) {
+                        
+                        double fixedCharge= 0.0, energyCharge= 4.50, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+                        double cost= 300 * energyCharge;
+
+                        fixedCharge= 0.0; energyCharge= 6.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+                        cost= ((units - 400) * energyCharge) + cost;
+                        System.out.println("Amount to be paid is "+ cost);
+                    }
+
+                    else if(units>=501.00 && units<=600.00) {
+
+                        double fixedCharge= 0.0, energyCharge= 4.50, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+                        double cost= 300 * energyCharge;
+                        fixedCharge= 0.0; energyCharge= 6.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+                        cost= (100 * energyCharge) + cost;
+                        fixedCharge= 0.0; energyCharge= 8.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                    after government subsidy */
+                        cost= ((units - 500) * energyCharge) + cost;
+                        System.out.println("Amount to be paid is "+ cost);
+                    }
+                    else if(units>=601.00 && units<=800.00) {
+                            
+                        double fixedCharge= 0.0, energyCharge= 4.50, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+                        double cost= 300 * energyCharge;
+                        fixedCharge= 0.0; energyCharge= 6.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+                        cost= (100 * energyCharge) + cost;
+                        fixedCharge= 0.0; energyCharge= 8.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                    after government subsidy */
+                        cost= (100 * energyCharge) + cost;
+                        fixedCharge= 0.0; energyCharge= 9.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                    after government subsidy */
+                        cost= ((units - 600) * energyCharge) + cost;                       
+                        System.out.println("Amount to be paid is "+ cost);
+                    }
+              }
+                     else if(units>1000.00) {
+
+                        double fixedCharge= 0.0, energyCharge= 4.50, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+                        double cost= 400 * energyCharge;
+                        fixedCharge= 0.0; energyCharge= 6.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+                        cost= (100 * energyCharge) + cost;
+                        fixedCharge= 0.0; energyCharge= 8.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                    after government subsidy */
+                        cost= (100 * energyCharge) + cost;
+                        fixedCharge= 0.0; energyCharge= 9.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                    after government subsidy */
+                        cost= (200 * energyCharge) + cost;
+                        fixedCharge= 0.0; energyCharge= 10.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                    after government subsidy */
+                        cost= (200 * energyCharge) + cost;
+                        cost= ((units - 800) * energyCharge) + cost;
+                        fixedCharge= 0.0; energyCharge= 11.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                    after government subsidy */
+    
+                        cost= ((units-1000.00) * energyCharge) +cost;
+                        System.out.println("Amount to be paid is "+ cost);
+                    }
+
+    }
+    else if(units<=500.00) { // Except handlooms category
+                
+                units= units - 100.00;
+
+                if(units<100) {
+
+                    double fixedCharge= 0.0, energyCharge= 0.0, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    double cost=   units * energyCharge;
+                    System.out.println("Amount to be paid is "+ cost);
+                                                         
+                    }
+                else if(units>=100.00 && units<=200.00) {
+                        
+                        double fixedCharge= 0.0, energyCharge= 2.25, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+                        double cost= units * energyCharge;
+                        System.out.println("Amount to be paid is "+ cost);
+                    }
+                else if(units>=201.00 && units<=400.00) {
+
+                        double fixedCharge= 0.0, energyCharge= 2.25, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+                        double cost= 100 * energyCharge;                        
+                        fixedCharge= 0.0; energyCharge= 4.50; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+    
+                        cost= ((units-200) * energyCharge) + cost;                        
+                        System.out.println("Amount to be paid is "+ cost);
+                    }
+                else if(units>=401.00 && units<=500.00) {
+
+                        double fixedCharge= 0.0, energyCharge= 2.25, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                    after government subsidy */
+                        double cost= 100 * energyCharge;                        
+                        fixedCharge= 0.0; energyCharge= 4.50; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+    
+                        cost= (200 * energyCharge) + cost;           
+                        fixedCharge= 0.0; energyCharge= 4.50; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                                 after government subsidy */
+    
+                        cost= ((units-400) * energyCharge) + cost;                        
+                        System.out.println("Amount to be paid is "+ cost);
+                    }
+}
+                
+                else if(units>=501.00 && units<=1000) {
+
+                    units= units - 100.00;
+
+                    if(units>=401.00 && units<=500.00) {
+                    double fixedCharge= 0.0, energyCharge= 4.50, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    double cost=   300 * energyCharge;
+                    fixedCharge= 0.0; energyCharge= 4.50; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    cost=   ((units-400) * energyCharge) + cost;
+                    System.out.println("Amount to be paid is "+ cost);
+                                                         
+                    }
+                    else if(units>=501.00 && units<=600.00) {
+                        
+                    double fixedCharge= 0.0, energyCharge= 4.50, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    double cost=   300 * energyCharge;
+                    fixedCharge= 0.0; energyCharge= 4.50; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    cost=   (100 * energyCharge) + cost;
+                    
+                    fixedCharge= 0.0; energyCharge= 4.50; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    cost=   ((units-500) * energyCharge) + cost;
+                    System.out.println("Amount to be paid is "+ cost);
+                    }
+
+                    else if(units>=601.00 && units<=800.00) {
+
+                    double fixedCharge= 0.0, energyCharge= 4.50, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    double cost=   300 * energyCharge;
+                    fixedCharge= 0.0; energyCharge= 6.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    cost=   (100 * energyCharge) + cost;
+                    fixedCharge= 0.0; energyCharge= 8.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    cost=   (100 * energyCharge) + cost;
+                    fixedCharge= 0.0; energyCharge= 9.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    cost=   ((units-600) * energyCharge) + cost;
+                    System.out.println("Amount to be paid is "+ cost);
+                   }
+                    else if(units>=801.00 && units<=1000.00) {
+                            
+                    double fixedCharge= 0.0, energyCharge= 4.50, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    double cost=   300 * energyCharge;
+                    fixedCharge= 0.0; energyCharge= 6.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    cost=   (100 * energyCharge) + cost;
+                    fixedCharge= 0.0; energyCharge= 8.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    cost=   (100 * energyCharge) + cost;
+                    fixedCharge= 0.0; energyCharge= 9.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    cost=   (200 * energyCharge) + cost;
+                    fixedCharge= 0.0; energyCharge= 9.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    cost=   ((units-800) * energyCharge) + cost;
+                    System.out.println("Amount to be paid is "+ cost);
+                    }
+        }
+                     else if(units>1000.00) {
+
+                    double fixedCharge= 0.0, energyCharge= 4.50, fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    double cost=   300 * energyCharge;
+                    fixedCharge= 0.0; energyCharge= 6.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    cost=   (100 * energyCharge) + cost;
+                    fixedCharge= 0.0; energyCharge= 8.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    cost=   (100 * energyCharge) + cost;
+                    fixedCharge= 0.0; energyCharge= 9.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    cost=   (200 * energyCharge) + cost;
+                    fixedCharge= 0.0; energyCharge= 10.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    cost=   (200 * energyCharge) + cost;
+                    
+                    fixedCharge= 0.0; energyCharge= 11.00; fixedChargeFor2months= 0.0; /* Energy charges and fixed charges for 2 months will be calculated 
+                                                                                            after government subsidy */
+                    cost=   ((units-1000) * energyCharge) + cost;
+                    System.out.println("Amount to be paid is "+ cost);
+               }     
+       }
+}
+public static void main(String args[]) {
+
+EbTariff obj = new EbTariff("domestic", 1000);
+
+  } 
+    }
