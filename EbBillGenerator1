@@ -41,16 +41,16 @@ public class EbTariff2
                             {
                              System.out.println("No charge for you!!!");
                             }
-                    else if(units<=100)
+                   else if(units<=100)
                            {
                             cost= units*2.25;
                             System.out.println("Your payment "+ cost);
-//                            below500(units);
                            }
                    else if(units<=500.00) 
                            {
                             below500(units);
                            } 
+                          }
                    else if(units>=501.00 && units<=1000) 
                            {
                             above500(units);
@@ -59,7 +59,7 @@ public class EbTariff2
                            {
                             above1000(units);
                            }     
-                          }       
+                              
  }        }
     
     double until() //for above 500
@@ -148,7 +148,7 @@ public class EbTariff2
 
              charge= 10.00;
              cost= ((units-700)*charge)+cost;
-             System.out.println("Your bill for "+ units+ "is "+ cost);
+             System.out.println("Your bill is "+ cost);
            return cost;
            }
     return cost;
@@ -171,13 +171,13 @@ public class EbTariff2
 
      charge= 11.00;// >1000
      cost= ((units-900)*charge)+cost;
-     System.out.println("Your bill for "+ units+ "is "+ cost);
+     System.out.println("Your bill  is "+ cost);
     return cost;
     }
 
 public static void main(String args[])
 {
     EbTariff2 obj = new EbTariff2();
-    obj.logic("domestic", 450);
+    obj.logic("domestic", 435);
 }
 }
