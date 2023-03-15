@@ -1,0 +1,163 @@
+package Bill;
+
+import java.util.Scanner;
+
+public class Bill 
+{	String product="", need="";
+	double tomatoPrice=20, onionPrice=25, beansPrice=45, carrotPrice=40, cucumberPrice=15;
+	double price=0.0;
+	String weightUnit="";
+	double weight=0.0, cost=0.0;
+	void prompt2()
+	{
+		System.out.println("What is your need..?"
+				+ "\nWe are having tomatos, onions, beans, carrot, cucumber.");
+		Scanner sc= new Scanner(System.in);
+		product=sc.nextLine();
+		selector(product, cost);
+	}
+	void prompter()
+	{
+		prompt1();
+	}
+	void prompt1()
+	{
+		System.out.println("Do you need anything..?");
+		System.out.println("Press Y for 'yes' \t N for 'no'");
+		Scanner sn= new Scanner(System.in);
+		need=sn.nextLine();
+		
+		if(need.equalsIgnoreCase("y"))
+		{
+		System.out.println("What is your need..?\nWe are having tomatos, onions, beans, carrot, cucumber.");
+		Scanner sc= new Scanner(System.in);
+		product=sc.nextLine();
+		selector(product, cost);
+		}
+		else if(need.equalsIgnoreCase("n"))
+		{
+			System.out.println("Thank you visit again!!");
+		}
+		else
+		{
+			System.out.println("Please click only 'Y' or 'N'..!");
+			 prompter();	
+		}
+	}
+		void reSelect(String product, double cost)
+		{
+			selector(product, cost);
+		}
+		
+		void selector(String product, double cost)
+		{		
+
+			if(product.equalsIgnoreCase("tomato")||product.equalsIgnoreCase("onion")||product.equalsIgnoreCase("beans")
+			 ||product.equalsIgnoreCase("carrot")||product.equalsIgnoreCase("cucumber"))
+			{
+			 if(product.equalsIgnoreCase("tomato"))
+			 {
+			  price= tomatoPrice;
+			 }
+			 else if(product.equalsIgnoreCase("onion"))
+			 {
+				  price= onionPrice;
+			 }
+			 else if(product.equalsIgnoreCase("beans"))
+			 {
+				  price= beansPrice;
+			 }
+			 else if(product.equalsIgnoreCase("carrot"))
+			 {
+				  price= carrotPrice;
+			 }
+			 else if(product.equalsIgnoreCase("cucumber"))
+			 {
+				  price= cucumberPrice;
+			 }
+			}
+			else
+			{
+				System.out.println("Please enter the vegetable name correctly and "
+						+ "in singular form!");
+				 prompt2();
+			}
+			product= product.toLowerCase();
+			System.out.println("1kg of "+product+" price is "+price+
+					"\nDo you need in kilos or grams..?");
+			Scanner wu1= new Scanner(System.in);
+			weightUnit=wu1.nextLine();
+			
+				if(weightUnit.equalsIgnoreCase("kilos")||weightUnit.equalsIgnoreCase("kilo")
+			    ||weightUnit.equalsIgnoreCase("kilograms")||weightUnit.equalsIgnoreCase("kilogram")) 
+			    {
+				System.out.println("How much kilos do you need..?");
+				Scanner sd= new Scanner(System.in);
+				weight=sd.nextDouble();
+				
+				cost= cost+(weight*price);
+				System.err.println("Total amount you need to pay: "+cost+
+						"\n\n Do You need any other..? "
+						+ "\nWe are having Tomatos,Onions, Beans, Carrot, Cucumber."
+						+ "\nPlease enter vegetable name or press 'N'");
+				
+				Scanner so1= new Scanner(System.in);
+				product=so1.nextLine();
+				if(product.equalsIgnoreCase("tomato")||product.equalsIgnoreCase("onion")||product.equalsIgnoreCase("beans")
+		 		 ||product.equalsIgnoreCase("carrot")||product.equalsIgnoreCase("onion"))
+				{
+					product= product.toLowerCase();
+					reSelect(product, cost);
+				}
+				else if(product.equalsIgnoreCase("no")||product.equalsIgnoreCase("n"))
+				{
+					System.err.println("Total amount you need to pay: "+cost);
+					System.out.println("Thank you visit again!!!");
+				}
+				else
+				{
+					System.out.println("Please enter the vegetable name correctly and "
+							+ "in singular form!");
+					 prompt2();	
+				}
+			    }
+				else if(weightUnit.equalsIgnoreCase("gram")||weightUnit.equalsIgnoreCase("grams"))
+					    {
+						System.out.println("How much grams do you need..?");
+						Scanner sd= new Scanner(System.in);
+						weight=sd.nextDouble();
+						
+						cost= cost+(weight*(price/1000));
+						System.err.println("Total amount you need to pay: "+cost+
+								"\n\n Do You need any other..? "
+								+ "\nWe are having Tomatos,Onions, Beans, Carrot, Cucumber."
+								+ "\nPlease enter vegetable name or press 'N'");
+						
+						Scanner so1= new Scanner(System.in);
+						product=so1.nextLine();
+						if(product.equalsIgnoreCase("tomato")||product.equalsIgnoreCase("onion")||product.equalsIgnoreCase("beans")
+				 		 ||product.equalsIgnoreCase("carrot")||product.equalsIgnoreCase("onion"))
+						{
+							product= product.toLowerCase();
+							reSelect(product, cost);
+						}
+						else if(product.equalsIgnoreCase("no")||product.equalsIgnoreCase("n"))
+						{
+							System.err.println("Total amount you need to pay: "+cost);
+							System.out.println("Thank you visit again!!!");
+						}
+						else
+						{
+							System.out.println("Please enter the vegetable name correctly and "
+									+ "in singular form!");
+							 prompt2();		
+						}
+					    }
+			}	
+		
+	public static void main(String[] args) 
+	{
+		Bill obj= new Bill();
+		obj.prompt1();
+	}
+}
