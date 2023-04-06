@@ -1,0 +1,153 @@
+package denomination;
+
+import java.util.Scanner;
+
+public class Denomination {
+	int count, cash;
+
+	void reader() {
+		System.out.println("Enter an amount!!!");
+		Scanner sc = new Scanner(System.in);
+			
+		try{
+			int cash = (int)sc.nextDouble();
+			counter(cash);
+		}
+		catch(Exception e)
+		{
+			System.out.println("Please enter correct amount!!");
+			reader();
+		}
+	} 
+  
+	void printer(int a, int cash)
+	{
+		if(count==1)
+			System.out.println(cash+" note: "+count);
+		else
+			System.out.println(cash+" notes: "+count);
+	}
+
+	void counter(int amount) 
+	{	
+abc: if (amount > 0) 
+		{
+			if (amount >= 2000) 
+			{   cash=2000;
+				count = amount / 2000;
+				amount = amount % 2000;
+//				if(count==1)
+//					System.out.println("2000 note: "+count);
+//				else
+//					System.out.println("2000 notes: "+count);
+				printer(count, cash);
+				if(amount==0)
+				{
+					break abc;
+				}
+			}
+			if (amount >= 500) 
+			{	cash=500;
+				count = amount / 500;
+				amount = amount % 500;
+
+				printer(count, cash);
+				if(amount==0)
+				{
+					break abc;
+				}
+			}
+			if (amount >= 200) 
+			{	cash= 200;
+				count = amount / 200;
+				amount = amount % 200;
+				
+				printer(count, cash);
+				if(amount==0)
+				{
+					break abc;
+				}
+			}
+			if (amount >= 100) 
+			{	cash= 100;
+				count = amount / 100;
+				amount = amount % 100;
+				printer(count, cash);
+				if(amount==0)
+				{
+					break abc;
+				}
+			}
+			if (amount >= 50) 
+			{	cash=50;
+				count = amount / 50;
+				amount = amount % 50;
+				printer(count, cash);
+				if(amount==0)
+				{
+					break abc;
+				}
+			}
+			if (amount >= 20) 
+			{	cash= 20;
+				count = amount / 20;
+				amount = amount % 20;
+				printer(count, cash);
+				if(amount==0)
+				{
+					break abc;
+				}
+			}
+			if (amount >= 10) 
+			{	cash= 10;
+				count = amount / 10;
+				amount = amount % 10;
+				printer(count, cash);
+				if(amount==0)
+				{
+					break abc;
+				}
+			}
+			if (amount >= 5) 
+			{	cash= 5;
+				count = amount / 5;
+				amount = amount % 5;
+				printer(count, cash);
+				if(amount==0)
+				{
+					break abc;
+				}
+			}
+			if (amount >= 2) 
+			{	cash= 2;
+				count = amount / 2;
+				amount = amount % 2;
+				printer(count, cash);				
+				if(amount==0)
+				{
+					break abc;
+				}
+			}
+			if (amount >= 1) 
+			{	cash= 1;
+				count = amount / 1;
+				amount = amount % 1;
+				printer(count, cash);
+				if(amount==0)
+				{
+					break abc;
+				}
+			}
+	}
+		else
+		{
+		System.out.println("Enter correct amount to denominate!!!");
+		reader();
+		}
+	}
+	public static void main(String[] args) {
+		Denomination obj = new Denomination();
+		obj.reader();
+
+	}
+}
